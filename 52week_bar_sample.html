@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>52 week range bar</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+:root {
+  --CP: 88.6; /* current price */
+  --H: 143; /* 52week high price */
+  --L: 75; /* 52week low price */
+  /* [(CP-L)/(H-L)]*100 =20% */
+}
+
+.range_container {
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  width: 640px;
+  height: 25px;
+  /*background: blue;*/
+}
+
+.range_bar {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  top: 10px;
+}
+
+.range_pointer {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 25px;
+  top: 0;
+  background: red;
+}
+
+.price {
+  font-family: arial;
+  font-size: 1.5em;
+  color: #000;
+}
+
+.posL {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+}
+
+.posR {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="range_container">
+    <div class="range_bar"></div>
+    <div class="range_pointer" style="left:20%"></div>
+    <div class="price posL">75</div>
+    <div class="price posR">143</div>
+  </div>
+
+</body>
+</html>
